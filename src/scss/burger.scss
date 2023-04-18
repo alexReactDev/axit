@@ -1,0 +1,53 @@
+.burger {
+	display: none;
+	position: relative;
+	width: 28px;
+	height: 22px;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
+
+	&::before, &::after, &__stripe {
+		position: absolute;
+		left: 0px;
+		width: 100%;
+		height: 2px;
+		background-color: $wh;
+	}
+
+	&::before, &::after {
+		content: '';
+		transition-duration: 350ms;
+	}
+
+	&::before {
+		top: 0px;
+	}
+
+	&::after {
+		bottom: 0px;
+	}
+
+	&__stripe {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&_active::before, &_active::after {
+		top: 50%;
+		transition-duration: 350ms;
+	}
+
+	&_active::before {
+		transform: rotate(-45deg);
+	}
+
+	&_active::after {
+		transform: rotate(45deg);
+	}
+
+	&_active &__stripe {
+		display: none;
+	}
+}

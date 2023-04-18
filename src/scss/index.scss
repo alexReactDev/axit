@@ -24,3 +24,9 @@ body {
 .test {
 	font-family: $raleway;
 }
+
+//BEM blocks
+@import "./burger.scss";
+@import "./header.scss";
+@import "./logo.scss";
+@import "./nav.scss";
