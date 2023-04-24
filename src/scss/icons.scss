@@ -1,0 +1,44 @@
+.icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 15px;
+
+	&__icon {
+		width: 14.285%;
+		overflow: hidden;
+		list-style: none;
+
+		&:nth-child(2) .icons__img {
+			margin-left: -100%;
+		}
+
+		&:nth-child(3) .icons__img {
+			margin-left: -200%;
+		}
+
+		&:nth-child(4) .icons__img {
+			margin-left: -300%;
+		}
+
+		&:nth-child(5) .icons__img {
+			margin-left: -400%;
+		}
+
+		&:nth-child(6) .icons__img {
+			margin-left: -500%;
+		}
+
+		&:nth-child(7) .icons__img {
+			margin-left: -600%;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__img {
+		width: 700%;
+	}
+}
