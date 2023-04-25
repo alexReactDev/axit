@@ -1,0 +1,11 @@
+.subtitle {
+	font-size: $h3;
+	font-weight: 700;
+	color: $hclight;
+	line-height: 1.4rem;
+
+	@media (max-width: 380px) {
+		font-size: 1.15rem;
+		line-height: 1.3rem;
+	}
+}

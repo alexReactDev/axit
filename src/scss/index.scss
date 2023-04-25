@@ -13,6 +13,13 @@ body {
 	height: 100%;
 	font-size: $fz;
 	font-family: $df;
+	color: $fc;
+	line-height: 1.3rem;
+
+	@media (max-width: 380px) {
+		line-height: 1.2rem;
+		font-size: 0.8125rem;
+	}
 }
 
 .content {
@@ -46,3 +53,5 @@ body {
 @import "./nav.scss";
 @import "./footer.scss";
 @import "./icons.scss";
+@import "./subtitle.scss";
+@import "./social.scss";
