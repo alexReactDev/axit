@@ -1,0 +1,119 @@
+.trial-form {
+	border-radius: 3px;
+	overflow: hidden;
+
+	&__heading {
+		padding: 20px 50px;
+		background-color: $gr;
+
+		@media (max-width: 449px) {
+			padding: 15px 40px;
+		}
+
+		@media (max-width: 379px) {
+			padding: 15px 25px;
+		}
+	}
+
+	&__title {
+		font-size: 1.25rem;
+		text-align: center;
+		font-weight: 700;
+		text-transform: capitalize;
+
+		@media (max-width: 449px) {
+			font-size: 1.15rem;
+		}
+
+		@media (max-width: 379px) {
+			font-size: 1.1rem;
+		}
+	}
+
+	&__highlight {
+		color: $orange;
+		text-transform: uppercase;
+	}
+
+	&__body {
+		padding: 30px 40px 48px 40px;
+		background-color: $wh;
+
+		@media (max-width: 449px) {
+			padding: 20px 30px 30px 30px;
+		}
+
+		@media (max-width: 379px) {
+			padding: 20px;
+		}
+	}
+
+	&__fields {
+	}
+
+	&__legend {
+		position: fixed;
+		top: -100%;
+	}
+
+	&__field {
+		position: relative;
+		display: flex;
+		&:not(:nth-child(2)):not(&_hidden) {
+			margin-top: 36px;
+		}
+
+		@media (max-width: 449px) {
+			&:not(:nth-child(2)):not(&_hidden) {
+				margin-top: 25px;
+			}
+	
+		}
+
+		&_hidden {
+			max-height: 0px;
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		left: 13px;
+		top: 10px;
+		color: $darkgr;
+		user-select: none;
+	}
+
+	&__label_hidden {
+		opacity: 0;
+	}
+
+	&__input {
+		flex: 1;
+		border: none;
+		border-bottom: solid $gr 1px;
+		padding: 10px 13px;
+		color: $darkgr;
+
+		&:focus {
+			outline: solid $orange 2px;
+			border-radius: 4px;
+		}
+	}
+
+	&__controls {
+		display: flex;
+	}
+
+	&__submit {
+		padding: 22px 0px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		flex: 1;
+
+		@media (max-width: 449px) {
+			padding: 18px 0px;
+		}
+	}
+}

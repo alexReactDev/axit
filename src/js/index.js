@@ -46,6 +46,15 @@ window.addEventListener("load", () => {
 
 	document.getElementById("city-tabs-1").classList.add("tabs__tab_active");
 	document.querySelector(".tabs__active").style.display = "block";
+
+	const trialFormPassword = document.querySelector("#trial-form__password");
+	trialFormPassword.addEventListener("input", openRetypePassword);
+
+	const trialFormInputs = document.querySelectorAll(".trial-form__input");
+	for (let input of trialFormInputs) {
+		input.addEventListener("focus", hideInputLabel);
+		input.addEventListener("blur", showInputLabel);
+	}
 })
 
 function openMenu() {
@@ -62,4 +71,20 @@ function closeMenu() {
 	burger.classList.remove("burger_active");
 	menu.classList.remove("header__nav_active");
 	burger.onclick = openMenu;
+}
+
+function openRetypePassword() {
+	document.querySelector("#trial-form__retype-password").closest(".trial-form__field").classList.remove("trial-form__field_hidden");
+}
+
+function hideInputLabel(e) {
+	const label = e.target.previousElementSibling;
+	label.classList.add("trial-form__label_hidden");
+}
+
+function showInputLabel(e) {
+	if(e.target.value === "") {
+		const label = e.target.previousElementSibling;
+		label.classList.remove("trial-form__label_hidden");
+	}
 }

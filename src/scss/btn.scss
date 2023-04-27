@@ -6,4 +6,10 @@
 	background-color: $orange;
 	border: none;
 	border-radius: 5px;
+
+	&_w {
+		border: solid $wh 1px;
+		border-radius: 0px;
+		background-color: transparent;
+	}
 }
