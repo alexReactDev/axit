@@ -15,6 +15,7 @@ body {
 	font-family: $df;
 	color: $fc;
 	line-height: 1.3rem;
+	scroll-behavior: smooth;
 
 	@media (max-width: 380px) {
 		line-height: 1.2rem;
@@ -23,8 +24,9 @@ body {
 }
 
 .content {
-	max-width: 1126px;
-	padding: 0px 10px;
+	box-sizing: border-box;
+	max-width: 1136px;
+	padding: 0px 15px;
 	margin: 0px auto;
 }
 
@@ -55,3 +57,7 @@ body {
 @import "./icons.scss";
 @import "./subtitle.scss";
 @import "./social.scss";
+@import "./city.scss";
+@import "./tabs.scss";
+@import "./btn.scss";
+@import "./fulscreen.scss";
