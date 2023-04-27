@@ -4,6 +4,7 @@
 	left: 0px;
 	width: 100%;
 	background-color: $bl;
+	z-index: 10;
 
 	&__body {
 		display: flex;
@@ -11,7 +12,7 @@
 		align-items: center;
 		padding: 20px 10px 22px 10px;
 
-		@media (max-width: 768px) {
+		@media (max-width: 1199px) {
 			padding: 30px 10px 34px 10px;
 		}
 	}
