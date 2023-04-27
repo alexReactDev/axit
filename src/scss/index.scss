@@ -11,12 +11,17 @@ html {
 
 body {
 	height: 100%;
+	padding-top: 72px;
 	font-size: $fz;
 	font-family: $df;
 	color: $fc;
 	line-height: 1.3rem;
 	scroll-behavior: smooth;
 
+	@media (max-width: 1199px) {
+		padding-top: 90px;
+	}
+	
 	@media (max-width: 380px) {
 		line-height: 1.2rem;
 		font-size: 0.8125rem;
