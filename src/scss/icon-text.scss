@@ -10,13 +10,8 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		display: flex;
 		width: 40px;
 		height: 40px;
-		border: solid $orange 1px;
-		border-radius: 50%;
-		justify-content: center;
-		align-items: center;
 
 		@media (max-width: 380px) {
 			width: 32px;
