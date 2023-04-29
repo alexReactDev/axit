@@ -1,0 +1,145 @@
+.price-card {
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	text-align: center;
+
+	&__title {
+		padding: 18px 20px;
+		border-bottom: solid white 1px;
+		background-color: $bgcolor-dark;
+		transition-property: padding;
+		transition-duration: 0.1s;
+
+		@media (max-width: 449px) {
+			font-size: 1.15rem;
+			padding: 14px 20px;
+		}
+	}
+
+	&__price {
+		padding: 5px 0px 18px 0px;
+
+		@media (max-width: 579px) {
+			padding: 10px 0px 18px 0px;
+		}
+
+		@media (max-width: 449px) {
+			padding: 6px 0px 15px 0px;
+		}
+
+		@media (max-width: 379px) {
+			padding: 4px 0px 13px 0px;
+		}
+	}
+
+	&__label {
+		min-height: 4px;
+		background-color: $orange;
+		transition-property: min-height;
+		transition-duration: 0.1s;
+	}
+
+	&__label-text {
+		display: inline-block;
+		padding: 10px;
+		color: $fclight;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: $orange;
+
+		@media (max-width: 1199px) {
+			position: absolute;
+			top: 45px;
+			right: -2px;
+			padding: 5px 10px;
+			font-size: 11px;
+		}
+
+		@media (max-width: 379px) {
+			top: 37.5px;
+			padding: 4px 10px;
+			font-size: 8px;
+		}
+	}
+
+	&__body {
+		background-color: $wh;
+	}
+
+	&__list {
+	}
+
+	&__list-item {
+		&:not(:last-child) {
+			border-bottom: solid $gr 1px;
+		}
+		padding: 10px;
+		list-style: none;
+		text-transform: uppercase;
+		transition-property: padding;
+		transition-duration: 0.1s;
+
+		@media (max-width: 449px) {
+			font-size: 0.8rem;
+			padding: 8px 10px;
+		}
+
+		@media (max-width: 449px) {
+			font-size: 0.7rem;
+			padding: 7px 10px;
+		}
+	}
+
+	&:hover {
+		transition-duration: 0.3s;
+		box-shadow: 5px 5px 25px 0px rgb(175, 160, 142);
+	}
+
+	&:hover &__list-item {
+		transition-duration: 0.4s;
+		padding: 12px;
+	}
+
+	&:hover &__label {
+		transition-duration: 0.4s;
+		min-height: 9px;
+	}
+
+	&:hover &__title {
+		transition-duration: 0.4s;
+		padding: 21px 20px;
+	}
+}
+.price {
+	background-color: $bgcolor-dark;
+
+	&__price {
+		font-size: 5.875rem;
+		line-height: 1em;
+		font-family: $raleway;
+		font-weight: 700;
+		color: $fclight;
+
+		@media (max-width: 579px) {
+			font-size: 4.5rem;
+		}
+
+		@media (max-width: 449px) {
+			font-size: 4rem;
+		}
+
+		@media (max-width: 379px) {
+			font-size: 3.7rem;
+		}
+	}
+
+	&__currency {
+		font-size: 2.187rem;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-style: italic;
+	}
+}

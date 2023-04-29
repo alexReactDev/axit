@@ -1,6 +1,11 @@
 .block {
 
+	&_dark {
+		background-color: $bgcolor
+	}
+
 	&__content {
+		width: 100%;
 	}
 
 	&__body {
@@ -53,6 +58,12 @@
 		flex-wrap: wrap;
 		row-gap: 70px;
 
+		&_align-bottom {
+			.block__column {
+				align-items: flex-end;
+			}
+		}
+
 		@media (max-width: 768px) {
 			flex-direction: column;
 			flex-wrap: nowrap;
@@ -82,5 +93,27 @@
 
 	&__text-column {
 		max-width: 355px;
+	}
+
+	&__price-card {
+		box-sizing: border-box;
+		flex: 1;
+		max-width: 343px;
+
+		@media (max-width: 767px) {
+			max-width: 400px;
+		}
+
+		@media (max-width: 579px) {
+			max-width: 360px;
+		}
+
+		@media (max-width: 449px) {
+			max-width: 90%;
+		}
+
+		@media (max-width: 379px) {
+			max-width: 100%;
+		}
 	}
 }

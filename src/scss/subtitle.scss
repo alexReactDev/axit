@@ -8,6 +8,10 @@
 		text-transform: capitalize;
 	}
 
+	&_w {
+		color: $fclight;
+	}
+
 	&_after {
 		position: relative;
 		padding-bottom: 30px;

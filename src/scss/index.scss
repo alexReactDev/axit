@@ -3,7 +3,7 @@
 
 //Fonts
 @import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap"; 
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"; 
 
 html {
 	height: 100%;
@@ -73,6 +73,7 @@ body {
 @import "./trial-form.scss";
 @import "./sublist.scss";
 @import "./icon-text.scss";
-@import "./why.scss";
+@import "./block.scss";
 @import "./text-column.scss";
 @import "./circle-icon.scss";
+@import "./price-card.scss";
