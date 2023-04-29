@@ -17,6 +17,7 @@ body {
 	color: $fc;
 	line-height: 1.3rem;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 
 	@media (max-width: 1199px) {
 		padding-top: 90px;
