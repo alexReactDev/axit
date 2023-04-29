@@ -1,0 +1,38 @@
+.icon-text {
+	position: relative;
+	padding-left: 70px;
+
+	@media (max-width: 380px) {
+		padding-left: 50px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: flex;
+		width: 40px;
+		height: 40px;
+		border: solid $orange 1px;
+		border-radius: 50%;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 380px) {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 5px;
+		color: $hc;
+		font-weight: 600;
+	}
+
+	&__text {
+	}
+
+	&__img {
+	}
+}

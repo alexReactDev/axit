@@ -4,6 +4,34 @@
 	color: $hclight;
 	line-height: 1.4rem;
 
+	&_after {
+		position: relative;
+		padding-bottom: 30px;
+
+		@media (max-width: 1199px) {
+			padding-bottom: 25px;
+		}
+
+		@media (max-width: 450px) {
+			padding-bottom: 20px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 64px;
+			height: 1px;
+			left: 0px;
+			bottom: 1px;
+			background-color: $orange;
+
+			@media (max-width: 1199px) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
 	@media (max-width: 380px) {
 		font-size: 1.15rem;
 		line-height: 1.3rem;
