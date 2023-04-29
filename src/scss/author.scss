@@ -1,0 +1,45 @@
+.author {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 767px) {
+		justify-content: center;
+	}
+
+	&__picture {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		@media (max-width: 379px) {
+			width: 60px;
+			height: 60px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__info {
+		flex: 1;
+		padding: 15px;
+
+		@media (max-width: 767px) {
+			max-width: 120px;
+		}
+
+		@media (max-width: 379px) {
+			padding: 10px 15px;
+		}
+	}
+
+	&__name {
+		margin-bottom: 5px;
+	}
+
+	&__about {
+	}
+}

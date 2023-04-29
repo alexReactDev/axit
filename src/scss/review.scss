@@ -1,0 +1,43 @@
+.review {
+
+	&__body {
+		padding-bottom: 15px;
+
+		@media (max-width: 379px) {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__text {
+		border-radius: 4px;
+		padding: 25px 10px;
+		position: relative;
+		background-color: $bgcolor;
+		font-style: italic;
+
+		@media (max-width: 379px) {
+			padding: 15px 10px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -15px;
+			left: 25px;
+			border-top: solid $bgcolor 15px;
+			border-left: solid transparent 10px;
+			border-right: solid transparent 10px;
+
+			@media (max-width: 767px) {
+				left: 50%;
+				transform: translate(-50%);
+			}
+		}
+	}
+
+	&__author {
+		@media (max-width: 379px) {
+			padding-bottom: 5px;
+		}
+	}
+}
