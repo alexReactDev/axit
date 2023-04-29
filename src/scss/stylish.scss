@@ -1,0 +1,61 @@
+.stylish {
+	background: url("../images/stylish/bg.jpg") center / cover no-repeat;
+
+	&__content {
+	}
+
+	&__body {
+		display: flex;
+		padding: 65px 0px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 579px) {
+			padding: 50px 0px;
+		}
+
+		@media (max-width: 449px) {
+			padding: 40px 0px;
+		}
+
+		@media (max-width: 379px) {
+			padding: 30px 0px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		@media (max-width: 449px) {
+			margin-bottom: 25px;
+		}
+
+		@media (max-width: 379px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		text-align: center;
+
+		@media (max-width: 449px) {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+		}
+
+		@media (max-width: 379px) {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__button {
+		padding: 8px 28px;
+	}
+}
