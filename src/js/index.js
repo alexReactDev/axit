@@ -1,4 +1,5 @@
-"use strict"
+import isInViewport from "./isInViewport.js";
+
 window.addEventListener("load", () => {
 	const burger = document.querySelector(".burger");
 	burger.onclick = openMenu;
@@ -54,6 +55,25 @@ window.addEventListener("load", () => {
 	for (let input of trialFormInputs) {
 		input.addEventListener("focus", hideInputLabel);
 		input.addEventListener("blur", showInputLabel);
+	}
+
+	//=======Blur/unblur sublist sections======================
+
+	let sublists = document.querySelectorAll(".sublist");
+
+	for (let sublist of sublists) {
+		if(!isInViewport(sublist, "half")) {
+			sublist.classList.add("sublist_blur");
+		}
+
+		isInViewport(sublist, "half", (isInViewport) => {
+			if(isInViewport) {
+				sublist.classList.remove("sublist_blur");
+			}
+			else {
+				sublist.classList.add("sublist_blur");
+			}
+		});
 	}
 })
 

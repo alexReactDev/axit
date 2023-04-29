@@ -1,4 +1,11 @@
 .sublist {
+	transition-property: opacity, visibility;
+	transition-duration: 0.5s;
+
+	.sublist__flex-left, .sublist__flex-right {
+		transition-property: transform;
+		transition-duration: 0.5s;
+	}
 
 	&_dark {
 		background-color: #f5f5f5;
@@ -27,6 +34,27 @@
 			@media (max-width: 1199px) {
 				padding: 0px 0px 0px 0px;
 			}
+		}
+	}
+
+	&_blur {
+		opacity: 0;
+		visibility: hidden;
+
+		.sublist__flex-left {
+			transform: translateX(-50%);
+		}
+		.sublist__flex-right {
+			transform: translateX(50%);
+		}
+	}
+
+	&_reverse#{&}_blur {
+		.sublist__flex-left {
+			transform: translateX(50%);
+		}
+		.sublist__flex-right {
+			transform: translateX(-50%);
 		}
 	}
 
