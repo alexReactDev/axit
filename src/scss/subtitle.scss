@@ -4,6 +4,10 @@
 	color: $hclight;
 	line-height: 1.4rem;
 
+	&_cp {
+		text-transform: capitalize;
+	}
+
 	&_after {
 		position: relative;
 		padding-bottom: 30px;
