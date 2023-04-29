@@ -5,6 +5,10 @@
 	.sublist__flex-left, .sublist__flex-right {
 		transition-property: transform;
 		transition-duration: 0.5s;
+
+		@media (max-width: 1199px) {
+			transition-duration: 0.8s;
+		}
 	}
 
 	&_dark {
