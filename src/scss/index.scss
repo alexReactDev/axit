@@ -29,6 +29,10 @@ body {
 	}
 }
 
+.locked {
+	overflow: hidden;
+}
+
 .content {
 	box-sizing: border-box;
 	max-width: 1136px;

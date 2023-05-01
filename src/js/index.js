@@ -75,22 +75,69 @@ window.addEventListener("load", () => {
 			}
 		});
 	}
+
+	//Add/remove menu links tabindex on resize
+	const navLinks = document.querySelectorAll(".nav__link");
+
+	if(window.innerWidth <= 786) {
+		for (let link of navLinks) {
+			link.setAttribute("tabindex", -1);
+		}
+	}
+
+	window.addEventListener("resize", () => {
+		if(window.innerWidth > 768) {
+			for (let link of navLinks) {
+				link.removeAttribute("tabindex");
+			}
+		}
+		else if (window.innerWidth <= 786 && window.location.hash !== "#menu") {
+			for (let link of navLinks) {
+				link.setAttribute("tabindex", -1);
+			}
+		}
+	}) 
 })
 
 function openMenu() {
+	document.body.classList.add("locked");
+
 	const burger = document.querySelector(".burger");
 	const menu = document.querySelector(".header__nav");
+
 	burger.classList.add("burger_active");
-	menu.classList.add("header__nav_active");
 	burger.onclick = closeMenu;
+
+	burger.setAttribute("aria-label", "close menu (menu opened)");
+
+	menu.classList.add("header__nav_active");
+
+	const navLinks = document.querySelectorAll(".nav__link");
+	for (let link of navLinks) {
+		link.removeAttribute("tabindex");
+	}
 }
 
-function closeMenu() {
+function closeMenu(e) {
+	e.preventDefault();
+	document.body.classList.remove("locked");
+
 	const burger = document.querySelector(".burger");
 	const menu = document.querySelector(".header__nav");
+
 	burger.classList.remove("burger_active");
-	menu.classList.remove("header__nav_active");
 	burger.onclick = openMenu;
+
+	burger.setAttribute("aria-label", "open menu (menu closed)");
+
+	window.location.hash = '';
+	
+	menu.classList.remove("header__nav_active");
+
+	const navLinks = document.querySelectorAll(".nav__link");
+	for (let link of navLinks) {
+		link.setAttribute("tabindex", -1);
+	}
 }
 
 function openRetypePassword() {
