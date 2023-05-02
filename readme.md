@@ -33,4 +33,5 @@ __О проекте:__ Axit - это современный лендинг с м
 
 ## Preview/Превью
 ![homepage](./preview/homepage.png)
+
 ![demo](./preview/demo.gif)
