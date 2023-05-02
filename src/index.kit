@@ -90,7 +90,7 @@
 											</p>
 											<p class="trial-form__field">
 												<label for="trial-form__email" class="trial-form__label">Email</label>
-												<input type="email" name="email" id="trial-form__email" class="trial-form__input" minlength="5" required pattern="[a-z0-9]+([a-z0-9.]*[a-z0-9]+)*@[a-z]+([a-z0-9-]*[a-z0-9]+)*\.[a-z]+">
+												<input type="email" name="email" id="trial-form__email" class="trial-form__input" minlength="5" required pattern="[a-z0-9]+([a-z0-9.]*[a-z0-9]+)*@[a-z]+([a-z0-9-]*[a-z0-9]+)*\.[a-z]+" aria-label="Email. Must be at least 5 characters and be valid email">
 											</p>
 											<p class="trial-form__field">
 												<label for="trial-form__password" class="trial-form__label">Password</label>
@@ -579,6 +579,53 @@
 						<a href="http://www.google.com/chrome/" class="stylish__button btn btn_w">
 							Download
 						</a>
+					</div>
+				</div>
+			</section>
+			<section class="contact fullscreen">
+				<div class="contact__content content">
+					<div class="contact__body">
+						<h2 class="contact__title title">
+							Contact US
+						</h2>
+						<p class="contact__text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</p>
+						<form action="#" class="contact__contact-form contact-form">
+							<div class="contact-form__body">
+								<ul class="contact-form__email-details">
+									<li class="contact-form__item">
+										<label for="contact-form__name" class="contact-form__label">
+											Name
+										</label>
+										<input type="text" name="name" id="contact-form__name" class="contact-form__input" required>
+									</li>
+									<li class="contact-form__item">
+										<label for="contact-form__email" class="contact-form__label">
+											Email
+										</label>
+										<input type="email" name="email"  id="contact-form__email" class="contact-form__input" required minlength="5" required pattern="[a-z0-9]+([a-z0-9.]*[a-z0-9]+)*@[a-z]+([a-z0-9-]*[a-z0-9]+)*\.[a-z]+" aria-label="Email. Must be at least 5 characters and be valid email">
+									</li>
+									<li class="contact-form__item">
+										<label for="contact-form__subject" class="contact-form__label">
+											Subject
+										</label>
+										<input type="text" name="subject" id="contact-form__subject" class="contact-form__input">
+									</li>
+								</ul>
+								<div class="contact-form__message-container">
+									<div class="contact-form__message">
+										<label for="contact-form__message" class="contact-form__label">
+											Message
+										</label>
+										<textarea name="message" id="contact-form__message" class="contact-form__textarea" required minlength="20"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="contact-form__basement">
+								<input type="submit" class="contact-form__submit btn" value="Send message">
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>

@@ -97,6 +97,17 @@ window.addEventListener("load", () => {
 			}
 		}
 	}) 
+
+	//Hide/show contact form labels
+	const contactFormInputs = Array.from(document.querySelectorAll(".contact-form__input"));
+	for(let input of contactFormInputs) {
+		input.addEventListener("focus", hideInputLabel);
+		input.addEventListener("blur", showInputLabel);
+	}
+
+	const contactFormMessage = document.querySelector(".contact-form__textarea");
+	contactFormMessage?.addEventListener("focus", hideInputLabel);
+	contactFormMessage?.addEventListener("blur", showInputLabel);
 })
 
 function openMenu() {
@@ -145,13 +156,15 @@ function openRetypePassword() {
 }
 
 function hideInputLabel(e) {
-	const label = e.target.previousElementSibling;
-	label.classList.add("trial-form__label_hidden");
+	const label = e.target.parentElement.querySelector("label");
+	label?.classList.add("visibly-hidden");
 }
 
 function showInputLabel(e) {
 	if(e.target.value === "") {
-		const label = e.target.previousElementSibling;
-		label.classList.remove("trial-form__label_hidden");
+		const label = e.target.parentElement.querySelector("label");;
+		label?.classList.remove("visibly-hidden");
+
+		console.log(e.target.previousElementSibling);
 	}
 }

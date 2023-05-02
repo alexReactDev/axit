@@ -1,0 +1,97 @@
+.contact-form {
+
+	&__body {
+		display: flex;
+
+		@media (max-width: 1199px) {
+			flex-direction: column;
+			gap: 25px;
+		}
+	}
+
+	&__email-details, &__message-container {
+		box-sizing: border-box;
+		flex: 1 1 50%;
+	}
+
+	&__email-details {
+		padding-right: 30px;
+
+		@media (max-width: 1199px) {
+			padding-right: 0px;
+		}
+	}
+
+	&__message-container {
+		padding-left: 30px;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 1199px) {
+			padding-left: 0px;
+		}
+	}
+
+	&__message {
+		position: relative;
+		display: flex;
+		flex: 1;
+	}
+
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+
+			@media (max-width: 379px) {
+				margin-bottom: 18px;
+			}
+		}
+		list-style: none;
+	}
+
+	&__label {
+		position: absolute;
+		left: 12px;
+		top: 8px;
+	}
+
+	&__input {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 10px 12px;
+		border: none;
+		border-bottom: solid $gr 1px;
+
+		@media (max-width: 379px) {
+			padding: 8px 10px;
+		}
+	}
+
+	&__textarea {
+		flex: 1;
+		border: none;
+		border-bottom: solid $gr 1px;
+		padding: 10px 12px;
+		resize: none;
+	}
+
+	&__basement {
+		display: flex;
+		padding-top: 40px;
+		justify-content: center;
+		
+		@media (max-width: 379px) {
+			padding-top: 25px;
+		}
+	}
+
+	&__submit {
+		text-transform: capitalize;
+		padding: 13px 20px;
+
+		@media (max-width: 379px) {
+			padding: 12px 18px;
+		}
+	}
+}

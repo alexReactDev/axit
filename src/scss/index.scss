@@ -89,3 +89,10 @@ body {
 @import "./review.scss";
 @import "./author.scss";
 @import "./stylish.scss";
+@import "./contact.scss";
+@import "./contact-form.scss";
+
+.visibly-hidden {
+	position: fixed;
+	top: -10000px;
+}
