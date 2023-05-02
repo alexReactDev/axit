@@ -45,9 +45,22 @@
 	}
 
 	&__link {
+		display: inline-block;
 		font-weight: 600;
 		color: $fclighter;
 		text-decoration: none;
+
+		&_hidden {
+			position: fixed;
+			top: 0px;
+			transform: translateY(-100%);
+		}
+
+		&_hidden:focus {
+			position: static;
+			transform: translateY(0%);
+			transition-duration: 0.5s;
+		}
 
 		&:hover {
 			color: $wh;
