@@ -11,7 +11,7 @@ __Used technologies:__
 - Adaptive-responsive layout
 - Javascript
 
-__About project:__ Axit is modern adaptive landing with smooth animations and adaptive design that looks good on any device. SCSS preprocessor used for more advanced styles. Javascript serves for better functionality.
+__About project:__ Axit is modern adaptive landing with smooth animations and adaptive design that looks good on any device. SCSS preprocessor was used for more advanced styles. Javascript serves for better functionality.
 
 ## :ru: Русский
 __Описание:__ Адаптивный лендинг
